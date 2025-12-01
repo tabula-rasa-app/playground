@@ -7,7 +7,7 @@ export default function Home() {
 						Tabula rasa
 					</h1>
 					<p className="text-lg text-zinc-600">Change anything you want</p>
-          <p>test</p>
+					<p>niki</p>
 				</div>
 			</main>
 		</div>
