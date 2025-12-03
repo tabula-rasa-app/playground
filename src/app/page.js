@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
 	return (
 		<div className="flex min-h-screen items-center justify-center bg-cyan-500 font-sans">
@@ -7,6 +9,12 @@ export default function Home() {
 						Tabula rasa
 					</h1>
 					<p className="text-lg text-zinc-400">Change anything you want</p>
+					<Link
+						href="/about"
+						className="text-base text-cyan-400 hover:text-cyan-300 transition-colors underline"
+					>
+						Learn more about this project →
+					</Link>
 				</div>
 
 				<div className="flex flex-col gap-4 text-center sm:text-left max-w-2xl">
