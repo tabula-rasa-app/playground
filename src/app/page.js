@@ -7,6 +7,12 @@ export default function Home() {
 						Tabula rasa
 					</h1>
 					<p className="text-lg text-zinc-600">Change anything you want</p>
+					<p className="text-base text-zinc-500 max-w-xl leading-relaxed">
+						Anyone can change anything on this page: text, colors, layout—you name it.
+						Creativity matters most. The idea with the most votes will win, and AI will
+						update the page accordingly. For example, change the text of your poem,
+						reimagine the color scheme, or redesign the entire experience.
+					</p>
 				</div>
 			</main>
 		</div>
