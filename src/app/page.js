@@ -1,7 +1,11 @@
+import WorldcoinTicker from '@/components/WorldcoinTicker';
+
 export default function Home() {
 	return (
-		<div className="flex min-h-screen items-center justify-center bg-pink-100 font-sans">
-			<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-pink-50 sm:items-start">
+		<div className="flex min-h-screen flex-col bg-pink-100 font-sans">
+			<WorldcoinTicker />
+			<div className="flex flex-1 items-center justify-center">
+				<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-pink-50 sm:items-start">
 				<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
 					<svg
 						width="200"
@@ -36,6 +40,7 @@ export default function Home() {
 					</p>
 				</div>
 			</main>
+			</div>
 		</div>
 	);
 }
