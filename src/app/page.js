@@ -38,6 +38,23 @@ export default function Home() {
 						update the page accordingly. For example, change the text of your poem,
 						reimagine the color scheme, or redesign the entire experience.
 					</p>
+					<div className="mt-8 p-6 bg-pink-200 rounded-lg border-2 border-pink-300 max-w-xl">
+						<h2 className="text-2xl font-bold text-pink-900 mb-4 text-center">Peppa Pig's Day</h2>
+						<div className="text-pink-800 leading-relaxed space-y-2">
+							<p>In a little house upon a hill,</p>
+							<p>Lives Peppa Pig with such good will,</p>
+							<p>She jumps in muddy puddles all day long,</p>
+							<p>And snorts and giggles with a happy song.</p>
+							<p className="mt-4">With George her brother by her side,</p>
+							<p>They play and laugh with so much pride,</p>
+							<p>Mummy Pig and Daddy too,</p>
+							<p>Make every day feel bright and new.</p>
+							<p className="mt-4">From dinosaurs to fairy tales,</p>
+							<p>Adventures never, ever fail,</p>
+							<p>So oink oink here and oink oink there,</p>
+							<p>Peppa spreads her joy everywhere!</p>
+						</div>
+					</div>
 				</div>
 			</main>
 			</div>
