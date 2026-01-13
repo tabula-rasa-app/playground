@@ -14,19 +14,13 @@ export default function Home() {
 						xmlns="http://www.w3.org/2000/svg"
 						className="mb-4"
 					>
-						<ellipse cx="100" cy="120" rx="60" ry="50" fill="#ffc0cb" />
-						<circle cx="100" cy="70" rx="45" ry="40" fill="#ffc0cb" />
-						<ellipse cx="65" cy="145" rx="12" ry="35" fill="#ffc0cb" />
-						<ellipse cx="90" cy="145" rx="12" ry="35" fill="#ffc0cb" />
-						<ellipse cx="110" cy="145" rx="12" ry="35" fill="#ffc0cb" />
-						<ellipse cx="135" cy="145" rx="12" ry="35" fill="#ffc0cb" />
-						<path d="M 60 40 Q 50 20 40 30 Q 45 45 60 50 Z" fill="#ff69b4" />
-						<path d="M 140 40 Q 150 20 160 30 Q 155 45 140 50 Z" fill="#ff69b4" />
-						<circle cx="85" cy="70" r="5" fill="#000" />
-						<circle cx="115" cy="70" r="5" fill="#000" />
-						<path d="M 90 85 Q 100 90 110 85" stroke="#000" strokeWidth="2" fill="none" />
-						<path d="M 60 25 Q 65 10 70 25 Q 75 10 80 25 Q 85 10 90 25" stroke="#ff1493" strokeWidth="3" fill="none" />
-						<path d="M 150 100 Q 160 95 170 100 L 175 140 Q 165 135 155 140 Z" fill="#ff69b4" />
+						<rect x="50" y="40" width="100" height="120" fill="#da291c" />
+						<rect x="50" y="80" width="100" height="80" fill="#fff" />
+						<rect x="50" y="120" width="100" height="40" fill="#241d4f" />
+						<circle cx="100" cy="60" r="15" fill="#ffd700" />
+						<path d="M 100 60 L 105 65 L 110 62 L 108 68 L 113 72 L 107 73 L 105 79 L 100 75 L 95 79 L 93 73 L 87 72 L 92 68 L 90 62 L 95 65 Z" fill="#da291c" />
+						<path d="M 60 150 Q 70 160 80 155 Q 85 165 100 165 Q 115 165 120 155 Q 130 160 140 150" stroke="#4a90e2" strokeWidth="2" fill="none" />
+						<path d="M 55 170 Q 75 180 100 175 Q 125 180 145 170" stroke="#4a90e2" strokeWidth="2" fill="none" />
 					</svg>
 					<h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-pink-900">
 						Tabula rasa
@@ -39,20 +33,20 @@ export default function Home() {
 						reimagine the color scheme, or redesign the entire experience.
 					</p>
 					<div className="mt-8 p-6 bg-pink-200 rounded-lg border-2 border-pink-300 max-w-xl">
-						<h2 className="text-2xl font-bold text-pink-900 mb-4 text-center">Peppa Pig's Day</h2>
+						<h2 className="text-2xl font-bold text-pink-900 mb-4 text-center">Come to Thailand</h2>
 						<div className="text-pink-800 leading-relaxed space-y-2">
-							<p>In a little house upon a hill,</p>
-							<p>Lives Peppa Pig with such good will,</p>
-							<p>She jumps in muddy puddles all day long,</p>
-							<p>And snorts and giggles with a happy song.</p>
-							<p className="mt-4">With George her brother by her side,</p>
-							<p>They play and laugh with so much pride,</p>
-							<p>Mummy Pig and Daddy too,</p>
-							<p>Make every day feel bright and new.</p>
-							<p className="mt-4">From dinosaurs to fairy tales,</p>
-							<p>Adventures never, ever fail,</p>
-							<p>So oink oink here and oink oink there,</p>
-							<p>Peppa spreads her joy everywhere!</p>
+							<p>Baby come to Thailand, where the sun shines bright,</p>
+							<p>Golden temples gleaming in the morning light,</p>
+							<p>Beaches white as diamonds, waters crystal clear,</p>
+							<p>A paradise awaits you, come and visit here.</p>
+							<p className="mt-4">Taste the pad thai cooking, smell the lemongrass,</p>
+							<p>Dance through floating markets, memories that last,</p>
+							<p>From Bangkok to the islands, adventures never end,</p>
+							<p>Thailand's warmth and beauty, like an old dear friend.</p>
+							<p className="mt-4">Baby come to Thailand, let your spirit soar,</p>
+							<p>Where smiles are given freely, and there's always more,</p>
+							<p>The land of endless wonders, culture rich and true,</p>
+							<p>Thailand's calling softly, it's waiting here for you!</p>
 						</div>
 					</div>
 				</div>
