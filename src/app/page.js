@@ -13,7 +13,7 @@ export default function Home() {
 						height="150"
 						viewBox="0 0 150 150"
 						xmlns="http://www.w3.org/2000/svg"
-						className="mb-4"
+						className="mb-4 dancing-cat"
 					>
 						{/* Cat body */}
 						<ellipse cx="75" cy="90" rx="35" ry="40" fill="#000" />
