@@ -1,12 +1,15 @@
 import WorldcoinTicker from '@/components/WorldcoinTicker';
+import SolarSystem from '@/components/SolarSystem';
 
 export default function Home() {
 	return (
 		<div className="flex min-h-screen flex-col bg-pink-100 font-sans">
 			<WorldcoinTicker />
 			<div className="flex flex-1 items-center justify-center">
-				<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-pink-50 sm:items-start">
-				<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
+				<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-4 sm:px-16 bg-pink-50 sm:items-start">
+				<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left w-full">
+					{/* Solar System - Travel through the galaxy */}
+					<SolarSystem />
 					{/* Black Cat SVG */}
 					<svg
 						width="150"
