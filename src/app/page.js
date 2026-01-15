@@ -1,5 +1,6 @@
 import WorldcoinTicker from '@/components/WorldcoinTicker';
 import SolarSystem from '@/components/SolarSystem';
+import ShareButton from '@/components/ShareButton';
 
 export default function Home() {
 	return (
@@ -80,6 +81,9 @@ export default function Home() {
 						update the page accordingly. For example, change the text of your poem,
 						reimagine the color scheme, or redesign the entire experience.
 					</p>
+					<div className="mt-6">
+						<ShareButton />
+					</div>
 					<div className="mt-8 p-6 bg-pink-200 rounded-lg border-2 border-pink-300 max-w-xl">
 						<h2 className="text-2xl font-bold text-pink-900 mb-4 text-center">Come to Thailand</h2>
 						<div className="text-pink-800 leading-relaxed space-y-2">
