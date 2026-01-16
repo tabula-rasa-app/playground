@@ -104,6 +104,27 @@ body {
 	}
 }
 
+/* Cheetos Rain Animations */
+@keyframes fall {
+	0% {
+		transform: translateY(-100px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(100vh);
+		opacity: 0.8;
+	}
+}
+
+@keyframes spin-slow {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 .animate-orbit {
 	animation: orbit linear infinite;
 }
@@ -122,4 +143,12 @@ body {
 
 .animate-fade-in {
 	animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-fall {
+	animation: fall linear infinite;
+}
+
+.animate-spin-slow {
+	animation: spin-slow linear infinite;
 }
