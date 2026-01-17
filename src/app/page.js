@@ -103,6 +103,12 @@ export default function Home() {
 							<p>Thailand's calling softly, it's waiting here for you!</p>
 						</div>
 					</div>
+					<div className="mt-8 p-6 bg-red-50/70 rounded-lg border-2 border-red-300 max-w-xl">
+						<h2 className="text-2xl font-bold text-red-900 mb-4 text-center">The Roman Empire</h2>
+						<p className="text-red-800 leading-relaxed">
+							The Roman Empire was one of the most remarkable civilizations in human history, spanning over a millennium and leaving an indelible mark on Western culture, law, architecture, and governance. At its peak, Rome controlled vast territories across Europe, North Africa, and the Middle East, bringing unprecedented levels of infrastructure, engineering marvels like aqueducts and roads, and a system of law that still influences modern legal codes. The Pax Romana brought relative peace and prosperity, enabling trade, cultural exchange, and technological advancement. However, the Empire ultimately fell due to a combination of factors: constant barbarian invasions, economic instability and heavy taxation, political corruption and leadership crises, overextension of military resources, and the splitting of the empire into Eastern and Western halves. By 476 CE, the Western Roman Empire collapsed, though its Eastern counterpart, the Byzantine Empire, endured for another thousand years, preserving Roman legacy until 1453.
+						</p>
+					</div>
 				</div>
 			</main>
 			</div>
