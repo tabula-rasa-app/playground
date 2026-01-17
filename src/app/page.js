@@ -5,11 +5,11 @@ import CheetosRain from '@/components/CheetosRain';
 
 export default function Home() {
 	return (
-		<div className="flex min-h-screen flex-col bg-pink-100 font-sans">
+		<div className="flex min-h-screen flex-col bg-transparent font-sans">
 			<CheetosRain />
 			<WorldcoinTicker />
 			<div className="flex flex-1 items-center justify-center">
-				<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-4 sm:px-16 bg-pink-50 sm:items-start">
+				<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-4 sm:px-16 bg-white/30 backdrop-blur-sm sm:items-start">
 				<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left w-full">
 					{/* Solar System - Travel through the galaxy */}
 					<SolarSystem />
@@ -73,11 +73,11 @@ export default function Home() {
 						<path d="M 60 150 Q 70 160 80 155 Q 85 165 100 165 Q 115 165 120 155 Q 130 160 140 150" stroke="#4a90e2" strokeWidth="2" fill="none" />
 						<path d="M 55 170 Q 75 180 100 175 Q 125 180 145 170" stroke="#4a90e2" strokeWidth="2" fill="none" />
 					</svg>
-					<h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-pink-900">
+					<h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-amber-900">
 						Tabula rasa
 					</h1>
-					<p className="text-lg text-pink-700">Change anything you want</p>
-					<p className="text-base text-pink-600 max-w-xl leading-relaxed">
+					<p className="text-lg text-orange-700">Change anything you want</p>
+					<p className="text-base text-amber-800 max-w-xl leading-relaxed">
 						Anyone can change anything on this page: text, colors, layout—you name it.
 						Creativity matters most. The idea with the most votes will win, and AI will
 						update the page accordingly. For example, change the text of your poem,
@@ -86,9 +86,9 @@ export default function Home() {
 					<div className="mt-6">
 						<ShareButton />
 					</div>
-					<div className="mt-8 p-6 bg-pink-200 rounded-lg border-2 border-pink-300 max-w-xl">
-						<h2 className="text-2xl font-bold text-pink-900 mb-4 text-center">Come to Thailand</h2>
-						<div className="text-pink-800 leading-relaxed space-y-2">
+					<div className="mt-8 p-6 bg-amber-50/70 rounded-lg border-2 border-amber-200 max-w-xl">
+						<h2 className="text-2xl font-bold text-amber-900 mb-4 text-center">Come to Thailand</h2>
+						<div className="text-amber-800 leading-relaxed space-y-2">
 							<p>Baby come to Thailand, where the sun shines bright,</p>
 							<p>Golden temples gleaming in the morning light,</p>
 							<p>Beaches white as diamonds, waters crystal clear,</p>

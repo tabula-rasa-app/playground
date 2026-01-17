@@ -1,54 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
 export default function CheetosRain() {
-  const [cheetos, setCheetos] = useState([]);
-
-  useEffect(() => {
-    // Generate 20 Cheetos with random properties
-    const cheetosArray = Array.from({ length: 20 }, (_, i) => ({
-      id: i,
-      left: `${Math.random() * 100}%`,
-      animationDelay: `${Math.random() * 5}s`,
-      animationDuration: `${3 + Math.random() * 4}s`, // 3-7 seconds
-      rotation: Math.random() * 360,
-      size: 20 + Math.random() * 20, // 20-40px
-    }));
-    setCheetos(cheetosArray);
-  }, []);
-
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {cheetos.map((cheeto) => (
-        <div
-          key={cheeto.id}
-          className="absolute -top-20 animate-fall"
-          style={{
-            left: cheeto.left,
-            animationDelay: cheeto.animationDelay,
-            animationDuration: cheeto.animationDuration,
-          }}
-        >
-          <div
-            className="animate-spin-slow"
-            style={{
-              animationDuration: '3s',
-              animationDelay: cheeto.animationDelay,
-            }}
-          >
-            <span
-              style={{
-                fontSize: `${cheeto.size}px`,
-                display: 'block',
-                transform: `rotate(${cheeto.rotation}deg)`,
-              }}
-            >
-              🧀
-            </span>
-          </div>
-        </div>
-      ))}
+      {/* Calm morning sky gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-100 via-orange-50 to-pink-50"></div>
+
+      {/* Soft sun glow */}
+      <div className="absolute top-10 right-10 w-32 h-32 bg-yellow-200 rounded-full opacity-40 blur-3xl animate-pulse-slow"></div>
+
+      {/* Gentle clouds */}
+      <div className="absolute top-20 left-10 w-40 h-12 bg-white rounded-full opacity-30 animate-float-slow"></div>
+      <div className="absolute top-32 right-32 w-48 h-14 bg-white rounded-full opacity-25 animate-float-slower"></div>
+      <div className="absolute top-48 left-1/3 w-36 h-10 bg-white rounded-full opacity-20 animate-float-slow"></div>
     </div>
   );
 }
