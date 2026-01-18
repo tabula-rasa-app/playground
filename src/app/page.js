@@ -109,6 +109,19 @@ export default function Home() {
 							The Roman Empire was one of the most remarkable civilizations in human history, spanning over a millennium and leaving an indelible mark on Western culture, law, architecture, and governance. At its peak, Rome controlled vast territories across Europe, North Africa, and the Middle East, bringing unprecedented levels of infrastructure, engineering marvels like aqueducts and roads, and a system of law that still influences modern legal codes. The Pax Romana brought relative peace and prosperity, enabling trade, cultural exchange, and technological advancement. However, the Empire ultimately fell due to a combination of factors: constant barbarian invasions, economic instability and heavy taxation, political corruption and leadership crises, overextension of military resources, and the splitting of the empire into Eastern and Western halves. By 476 CE, the Western Roman Empire collapsed, though its Eastern counterpart, the Byzantine Empire, endured for another thousand years, preserving Roman legacy until 1453.
 						</p>
 					</div>
+					<div className="mt-8 p-6 bg-blue-50/70 rounded-lg border-2 border-blue-300 max-w-xl">
+						<h2 className="text-2xl font-bold text-blue-900 mb-4 text-center">Perro Pitbull</h2>
+						<div className="flex justify-center">
+							<img
+								src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=800&auto=format&fit=crop&q=80"
+								alt="Perro Pitbull"
+								className="rounded-lg shadow-lg w-full max-w-md h-auto object-cover"
+							/>
+						</div>
+						<p className="text-blue-800 leading-relaxed mt-4 text-center">
+							Un hermoso perro Pitbull, conocido por su lealtad y fuerza.
+						</p>
+					</div>
 				</div>
 			</main>
 			</div>
