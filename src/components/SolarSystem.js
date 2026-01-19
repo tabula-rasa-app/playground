@@ -25,14 +25,14 @@ export default function SolarSystem() {
 	}, []);
 
 	const planets = [
-		{ name: 'Mercurio', size: 8, color: '#8c7853', orbit: 60, speed: 4 },
-		{ name: 'Venus', size: 12, color: '#ffc649', orbit: 85, speed: 3.5 },
-		{ name: 'Tierra', size: 13, color: '#4a90e2', orbit: 110, speed: 3 },
-		{ name: 'Marte', size: 10, color: '#e27b58', orbit: 135, speed: 2.5 },
-		{ name: 'Júpiter', size: 25, color: '#c88b3a', orbit: 180, speed: 1.5 },
-		{ name: 'Saturno', size: 22, color: '#fad5a5', orbit: 220, speed: 1.2, hasRing: true },
-		{ name: 'Urano', size: 16, color: '#4fd0e7', orbit: 260, speed: 0.9 },
-		{ name: 'Neptuno', size: 15, color: '#4166f5', orbit: 290, speed: 0.7 }
+		{ name: 'Mercurio', size: 8, color: '#8c7853', orbit: 60, speed: 2.5 },
+		{ name: 'Venus', size: 12, color: '#ffc649', orbit: 85, speed: 2.2 },
+		{ name: 'Tierra', size: 13, color: '#4a90e2', orbit: 110, speed: 1.9 },
+		{ name: 'Marte', size: 10, color: '#e27b58', orbit: 135, speed: 1.6 },
+		{ name: 'Júpiter', size: 25, color: '#c88b3a', orbit: 180, speed: 1.0 },
+		{ name: 'Saturno', size: 22, color: '#fad5a5', orbit: 220, speed: 0.8, hasRing: true },
+		{ name: 'Urano', size: 16, color: '#4fd0e7', orbit: 260, speed: 0.6 },
+		{ name: 'Neptuno', size: 15, color: '#4166f5', orbit: 290, speed: 0.5 }
 	];
 
 	const handlePlanetClick = (planet) => {
