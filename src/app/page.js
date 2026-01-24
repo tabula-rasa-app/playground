@@ -2,6 +2,7 @@ import WorldcoinTicker from '@/components/WorldcoinTicker';
 import SolarSystem from '@/components/SolarSystem';
 import ShareButton from '@/components/ShareButton';
 import CheetosRain from '@/components/CheetosRain';
+import LotteryGenerator from '@/components/LotteryGenerator';
 
 export default function Home() {
 	return (
@@ -23,6 +24,12 @@ export default function Home() {
 							update the page accordingly. For example, change the text of your poem,
 							reimagine the color scheme, or redesign the entire experience.
 						</p>
+
+						{/* Lottery Generator */}
+						<div className="w-full mt-8">
+							<LotteryGenerator />
+						</div>
+
 						<div className="mt-6">
 							<ShareButton />
 						</div>
