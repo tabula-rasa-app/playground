@@ -150,3 +150,63 @@ body {
 .animate-float-slower {
 	animation: float-slower 12s ease-in-out infinite;
 }
+
+/* Corvette Animations */
+@keyframes corvette-drive {
+	0% {
+		left: -150px;
+	}
+	100% {
+		left: calc(100% + 50px);
+	}
+}
+
+@keyframes spin-wheels {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes road-marks {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes speed-lines {
+	0% {
+		opacity: 0.6;
+		transform: translateX(0) scaleX(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-30px) scaleX(0.5);
+	}
+}
+
+.animate-corvette-drive {
+	animation: corvette-drive linear infinite;
+}
+
+.animate-spin-wheels {
+	animation: spin-wheels linear infinite;
+}
+
+.animate-road-marks {
+	animation: road-marks 2s linear infinite;
+}
+
+.animate-road-marks-delayed {
+	animation: road-marks 2s linear infinite;
+	animation-delay: 1s;
+}
+
+.animate-speed-lines {
+	animation: speed-lines 0.3s ease-out infinite;
+}

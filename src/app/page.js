@@ -3,6 +3,7 @@ import SolarSystem from '@/components/SolarSystem';
 import ShareButton from '@/components/ShareButton';
 import CheetosRain from '@/components/CheetosRain';
 import LotteryGenerator from '@/components/LotteryGenerator';
+import CorvetteDrive from '@/components/CorvetteDrive';
 
 export default function Home() {
 	return (
@@ -12,6 +13,9 @@ export default function Home() {
 			<div className="flex flex-1 items-center justify-center">
 				<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-16 px-4 sm:px-16 bg-white/30 backdrop-blur-sm sm:items-start">
 					<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left w-full">
+						{/* Corvette Drive - Watch the Corvette race */}
+						<CorvetteDrive />
+
 						{/* Solar System - Travel through the galaxy */}
 						<SolarSystem />
 						<h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-amber-900">
