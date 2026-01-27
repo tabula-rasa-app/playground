@@ -37,6 +37,14 @@ export default function About() {
 								The Roman Empire was one of the most remarkable civilizations in human history, spanning over a millennium and leaving an indelible mark on Western culture, law, architecture, and governance. At its peak, Rome controlled vast territories across Europe, North Africa, and the Middle East, bringing unprecedented levels of infrastructure, engineering marvels like aqueducts and roads, and a system of law that still influences modern legal codes. The Pax Romana brought relative peace and prosperity, enabling trade, cultural exchange, and technological advancement. However, the Empire ultimately fell due to a combination of factors: constant barbarian invasions, economic instability and heavy taxation, political corruption and leadership crises, overextension of military resources, and the splitting of the empire into Eastern and Western halves. By 476 CE, the Western Roman Empire collapsed, though its Eastern counterpart, the Byzantine Empire, endured for another thousand years, preserving Roman legacy until 1453.
 							</p>
 						</div>
+
+						{/* Poland */}
+						<div className="p-6 bg-blue-50/70 rounded-lg border-2 border-blue-300 max-w-xl w-full">
+							<h2 className="text-2xl font-bold text-blue-900 mb-4 text-center">Why Visit Poland?</h2>
+							<p className="text-blue-800 leading-relaxed">
+								Poland is a captivating destination that offers an extraordinary blend of rich history, stunning architecture, and vibrant culture. From the medieval streets of Kraków with its magnificent Wawel Castle to the reconstructed beauty of Warsaw's Old Town, Poland's cities tell stories of resilience and renewal. The country boasts breathtaking natural landscapes, including the Tatra Mountains, pristine Baltic beaches, and ancient Białowieża Forest. Polish cuisine is hearty and delicious, featuring pierogi, żurek, and world-class vodka. The warmth and hospitality of Polish people make visitors feel welcome, while the affordable prices allow travelers to experience luxury without breaking the bank. Whether you're exploring the poignant history of Auschwitz, marveling at the salt sculptures in Wieliczka Salt Mine, or enjoying the lively atmosphere of seaside Gdańsk, Poland offers unforgettable experiences that combine deep cultural heritage with modern European charm.
+							</p>
+						</div>
 					</div>
 				</main>
 			</div>
