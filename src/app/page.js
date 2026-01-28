@@ -4,6 +4,7 @@ import ShareButton from '@/components/ShareButton';
 import CheetosRain from '@/components/CheetosRain';
 import LotteryGenerator from '@/components/LotteryGenerator';
 import CorvetteDrive from '@/components/CorvetteDrive';
+import GlobalCounter from '@/components/GlobalCounter';
 
 export default function Home() {
 	return (
@@ -15,6 +16,9 @@ export default function Home() {
 					<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left w-full">
 						{/* Corvette Drive - Watch the Corvette race */}
 						<CorvetteDrive />
+
+						{/* Global Click Counter */}
+						<GlobalCounter />
 
 						{/* Solar System - Travel through the galaxy */}
 						<SolarSystem />
