@@ -24,3 +24,17 @@ model Counter {
   value     Int      @default(0)
   updatedAt DateTime @default(now()) @updatedAt
 }
+
+model Visitor {
+  id        Int      @id @default(autoincrement())
+  name      String
+  visitedAt DateTime @default(now())
+}
+
+model VisitorOfTheDay {
+  id           Int      @id @default(autoincrement())
+  visitorId    Int
+  visitorName  String
+  selectedAt   DateTime @default(now())
+  expiresAt    DateTime
+}

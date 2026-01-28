@@ -5,6 +5,7 @@ import CheetosRain from '@/components/CheetosRain';
 import LotteryGenerator from '@/components/LotteryGenerator';
 import CorvetteDrive from '@/components/CorvetteDrive';
 import GlobalCounter from '@/components/GlobalCounter';
+import VisitorOfTheDay from '@/components/VisitorOfTheDay';
 
 export default function Home() {
 	return (
@@ -19,6 +20,9 @@ export default function Home() {
 
 						{/* Global Click Counter */}
 						<GlobalCounter />
+
+						{/* Visitor of the Day */}
+						<VisitorOfTheDay />
 
 						{/* Solar System - Travel through the galaxy */}
 						<SolarSystem />
