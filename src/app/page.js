@@ -4,6 +4,7 @@ import ShareButton from '@/components/ShareButton';
 import CheetosRain from '@/components/CheetosRain';
 import LotteryGenerator from '@/components/LotteryGenerator';
 import CorvetteDrive from '@/components/CorvetteDrive';
+import ChickenCrossing from '@/components/ChickenCrossing';
 import GlobalCounter from '@/components/GlobalCounter';
 import VisitorOfTheDay from '@/components/VisitorOfTheDay';
 
@@ -17,6 +18,9 @@ export default function Home() {
 					<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left w-full">
 						{/* Corvette Drive - Watch the Corvette race */}
 						<CorvetteDrive />
+
+						{/* Chicken Crossing - Help the chicken cross the road */}
+						<ChickenCrossing />
 
 						{/* Global Click Counter */}
 						<GlobalCounter />

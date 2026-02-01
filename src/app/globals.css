@@ -210,3 +210,56 @@ body {
 .animate-speed-lines {
 	animation: speed-lines 0.3s ease-out infinite;
 }
+
+/* Chicken Crossing Animations */
+@keyframes chicken-cross {
+	0% {
+		left: 10%;
+	}
+	100% {
+		left: 90%;
+	}
+}
+
+@keyframes chicken-walk-left {
+	0%, 100% {
+		transform: translateY(0) rotate(0deg);
+	}
+	25% {
+		transform: translateY(-3px) rotate(-5deg);
+	}
+	50% {
+		transform: translateY(0) rotate(0deg);
+	}
+	75% {
+		transform: translateY(-3px) rotate(5deg);
+	}
+}
+
+@keyframes chicken-walk-right {
+	0%, 100% {
+		transform: translateY(0) rotate(0deg);
+	}
+	25% {
+		transform: translateY(-3px) rotate(5deg);
+	}
+	50% {
+		transform: translateY(0) rotate(0deg);
+	}
+	75% {
+		transform: translateY(-3px) rotate(-5deg);
+	}
+}
+
+.animate-chicken-cross {
+	animation: chicken-cross 6s ease-in-out forwards;
+}
+
+.animate-chicken-walk-left {
+	animation: chicken-walk-left 0.3s ease-in-out infinite;
+}
+
+.animate-chicken-walk-right {
+	animation: chicken-walk-right 0.3s ease-in-out infinite;
+	animation-delay: 0.15s;
+}
