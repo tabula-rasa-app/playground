@@ -5,6 +5,7 @@ import CheetosRain from '@/components/CheetosRain';
 import LotteryGenerator from '@/components/LotteryGenerator';
 import CorvetteDrive from '@/components/CorvetteDrive';
 import ChickenCrossing from '@/components/ChickenCrossing';
+import FlappyNails from '@/components/FlappyNails';
 import GlobalCounter from '@/components/GlobalCounter';
 import VisitorOfTheDay from '@/components/VisitorOfTheDay';
 
@@ -21,6 +22,9 @@ export default function Home() {
 
 						{/* Chicken Crossing - Help the chicken cross the road */}
 						<ChickenCrossing />
+
+						{/* Flappy Nails - Paint nails and fly */}
+						<FlappyNails />
 
 						{/* Global Click Counter */}
 						<GlobalCounter />
