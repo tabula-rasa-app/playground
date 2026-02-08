@@ -23,7 +23,7 @@ export default function Home() {
 						{/* Chicken Crossing - Help the chicken cross the road */}
 						<ChickenCrossing />
 
-						{/* ValuValu Paints - Paint the nails as they appear */}
+						{/* Borobudur Temple - Guide the monk to collect sacred bells */}
 						<FlappyNails />
 
 						{/* Global Click Counter */}
