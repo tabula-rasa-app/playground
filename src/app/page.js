@@ -1,9 +1,32 @@
+import CheetosRain from '@/components/CheetosRain';
+import WorldcoinTicker from '@/components/WorldcoinTicker';
+import GlobalCounter from '@/components/GlobalCounter';
+import VisitorOfTheDay from '@/components/VisitorOfTheDay';
+import LotteryGenerator from '@/components/LotteryGenerator';
+import SolarSystem from '@/components/SolarSystem';
+import CorvetteDrive from '@/components/CorvetteDrive';
+import ChickenCrossing from '@/components/ChickenCrossing';
+import FlappyNails from '@/components/FlappyNails';
+import Caminar from '@/components/Caminar';
+import ShareButton from '@/components/ShareButton';
+
 export default function Home() {
 	return (
 		<div className="flex min-h-screen flex-col bg-transparent font-sans">
-			<div className="flex flex-1 items-center justify-center">
-				<main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-16 px-4 sm:px-16 bg-white/30 backdrop-blur-sm sm:items-start">
-					<div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left w-full">
+			<CheetosRain />
+			<WorldcoinTicker />
+			<div className="relative z-10 flex flex-1 justify-center">
+				<main className="w-full max-w-3xl flex flex-col items-center py-8 px-4">
+					<div className="flex flex-col items-center gap-8 w-full">
+						<GlobalCounter />
+						<VisitorOfTheDay />
+						<LotteryGenerator />
+						<Caminar />
+						<CorvetteDrive />
+						<ChickenCrossing />
+						<FlappyNails />
+						<SolarSystem />
+						<ShareButton />
 					</div>
 				</main>
 			</div>
