@@ -24,12 +24,8 @@ export default function WorldcoinTicker() {
   };
 
   useEffect(() => {
-    // Initial fetch
     fetchHolders();
-
-    // Update every 10 seconds for real-time updates
     const interval = setInterval(fetchHolders, 10000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -39,34 +35,34 @@ export default function WorldcoinTicker() {
   };
 
   return (
-    <div className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 px-4 shadow-lg">
+    <div className="w-full bg-[var(--bg-surface)] border-b border-[var(--border-color)] py-2 px-4">
       <div className="max-w-3xl mx-auto flex items-center justify-center gap-3">
         <div className="flex items-center gap-2">
           <svg
-            width="24"
-            height="24"
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="animate-pulse"
+            className="text-[var(--accent)]"
           >
             <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
             <circle cx="12" cy="12" r="6" fill="currentColor" />
           </svg>
-          <span className="font-semibold text-sm sm:text-base">Worldcoin Holders:</span>
+          <span className="text-xs font-medium text-[var(--text-secondary)]">Worldcoin Holders</span>
         </div>
         <div className="flex items-center gap-2">
           {loading && holders === null ? (
-            <span className="text-sm sm:text-lg font-mono">Loading...</span>
+            <span className="text-xs text-[var(--text-muted)] font-mono">Loading...</span>
           ) : error ? (
-            <span className="text-sm sm:text-lg font-mono">Unavailable</span>
+            <span className="text-xs text-[var(--text-muted)] font-mono">Unavailable</span>
           ) : (
-            <span className="text-lg sm:text-2xl font-bold font-mono tabular-nums">
+            <span className="text-sm font-bold font-mono tabular-nums text-[var(--text-primary)]">
               {formatNumber(holders)}
             </span>
           )}
           {!loading && !error && (
-            <div className="w-2 h-2 rounded-full bg-green-300 animate-pulse" title="Live" />
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" title="Live" />
           )}
         </div>
       </div>

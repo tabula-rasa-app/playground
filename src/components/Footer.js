@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
-    <footer className="w-full py-8 px-4 mt-16">
+    <footer className="w-full py-6 px-4 mt-12 border-t border-[var(--border-color)]">
       <div className="max-w-3xl mx-auto text-center">
         <a
           href="https://github.com/tabula-rasa-app/playground"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 transition-colors"
+          className="inline-flex items-center gap-2 text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
         >
           <svg
-            className="w-6 h-6"
+            className="w-5 h-5"
             fill="currentColor"
             viewBox="0 0 24 24"
             aria-hidden="true"
@@ -20,7 +20,7 @@ export default function Footer() {
               clipRule="evenodd"
             />
           </svg>
-          <span className="text-sm font-medium">View on GitHub</span>
+          <span className="text-xs font-medium">View on GitHub</span>
         </a>
       </div>
     </footer>

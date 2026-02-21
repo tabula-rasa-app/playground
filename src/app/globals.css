@@ -1,48 +1,94 @@
 @import "tailwindcss";
 
+/* Class-based dark mode for Tailwind v4 */
+@custom-variant dark (&:is(.dark *));
+
 @theme inline {
 	--font-sans: var(--font-geist-sans);
 	--font-mono: var(--font-geist-mono);
 }
 
-body {
-	font-family: Arial, Helvetica, sans-serif;
+/* CSS Variables for theming */
+:root {
+	--bg-primary: #faf9f7;
+	--bg-surface: #ffffff;
+	--bg-surface-2: #f4f2ee;
+	--text-primary: #1c1917;
+	--text-secondary: #78716c;
+	--text-muted: #a8a29e;
+	--border-color: #e7e5e4;
+	--accent: #7c6fcd;
+	--accent-soft: #ede9fe;
+	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+	--shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+	--shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
 }
 
+.dark {
+	--bg-primary: #0f1117;
+	--bg-surface: #1a1d2e;
+	--bg-surface-2: #242840;
+	--text-primary: #e8eaf0;
+	--text-secondary: #9ca3af;
+	--text-muted: #6b7280;
+	--border-color: #2d3148;
+	--accent: #9b8fdf;
+	--accent-soft: #2d2a4a;
+	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+	--shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+	--shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Base styles */
+html {
+	color-scheme: light;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark {
+	color-scheme: dark;
+}
+
+body {
+	font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.6;
+}
+
+/* Smooth theme transitions for elements */
+*, *::before, *::after {
+	transition-property: background-color, border-color, color, fill, stroke;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+}
+
+/* Override transition for animated elements - keep their own transitions */
+[style*="animation"], .animate-bounce, .animate-pulse,
+.animate-orbit, .animate-twinkle, .animate-warp,
+.animate-pulse-slow, .animate-float-slow, .animate-float-slower,
+.animate-corvette-drive, .animate-spin-wheels, .animate-road-marks,
+.animate-road-marks-delayed, .animate-speed-lines,
+.animate-chicken-cross, .animate-chicken-walk-left, .animate-chicken-walk-right,
+.animate-fade-out, .animate-fade-in, .dancing-cat {
+	transition: none;
+}
+
+/* Dancing cat animation */
 @keyframes dance {
-	0% {
-		transform: translate(0, 0) rotate(0deg);
-	}
-	10% {
-		transform: translate(20px, -10px) rotate(5deg);
-	}
-	20% {
-		transform: translate(40px, 5px) rotate(-5deg);
-	}
-	30% {
-		transform: translate(60px, -15px) rotate(8deg);
-	}
-	40% {
-		transform: translate(40px, -5px) rotate(-8deg);
-	}
-	50% {
-		transform: translate(20px, 10px) rotate(5deg);
-	}
-	60% {
-		transform: translate(-20px, -10px) rotate(-5deg);
-	}
-	70% {
-		transform: translate(-40px, 5px) rotate(8deg);
-	}
-	80% {
-		transform: translate(-20px, -5px) rotate(-8deg);
-	}
-	90% {
-		transform: translate(10px, 10px) rotate(3deg);
-	}
-	100% {
-		transform: translate(0, 0) rotate(0deg);
-	}
+	0% { transform: translate(0, 0) rotate(0deg); }
+	10% { transform: translate(20px, -10px) rotate(5deg); }
+	20% { transform: translate(40px, 5px) rotate(-5deg); }
+	30% { transform: translate(60px, -15px) rotate(8deg); }
+	40% { transform: translate(40px, -5px) rotate(-8deg); }
+	50% { transform: translate(20px, 10px) rotate(5deg); }
+	60% { transform: translate(-20px, -10px) rotate(-5deg); }
+	70% { transform: translate(-40px, 5px) rotate(8deg); }
+	80% { transform: translate(-20px, -5px) rotate(-8deg); }
+	90% { transform: translate(10px, 10px) rotate(3deg); }
+	100% { transform: translate(0, 0) rotate(0deg); }
 }
 
 .dancing-cat {
@@ -51,214 +97,102 @@ body {
 
 /* Solar System Animations */
 @keyframes orbit {
-	from {
-		transform: translate(-50%, -50%) rotate(0deg);
-	}
-	to {
-		transform: translate(-50%, -50%) rotate(360deg);
-	}
+	from { transform: translate(-50%, -50%) rotate(0deg); }
+	to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 @keyframes twinkle {
-	0%, 100% {
-		opacity: 0.3;
-	}
-	50% {
-		opacity: 1;
-	}
+	0%, 100% { opacity: 0.3; }
+	50% { opacity: 1; }
 }
 
 @keyframes warp {
-	0% {
-		transform: translateX(0) scaleY(1);
-		opacity: 0;
-	}
-	50% {
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(-200vw) scaleY(3);
-		opacity: 0;
-	}
+	0% { transform: translateX(0) scaleY(1); opacity: 0; }
+	50% { opacity: 1; }
+	100% { transform: translateX(-200vw) scaleY(3); opacity: 0; }
 }
 
 @keyframes pulse-slow {
-	0%, 100% {
-		transform: scale(1);
-		opacity: 1;
-	}
-	50% {
-		transform: scale(1.1);
-		opacity: 0.8;
-	}
+	0%, 100% { transform: scale(1); opacity: 1; }
+	50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 @keyframes fade-in {
-	from {
-		opacity: 0;
-		transform: translateY(-10px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+	from { opacity: 0; transform: translateY(-10px); }
+	to { opacity: 1; transform: translateY(0); }
 }
 
-/* Morning Background Animations */
+/* Background Animations */
 @keyframes float-slow {
-	0%, 100% {
-		transform: translateX(0) translateY(0);
-	}
-	50% {
-		transform: translateX(20px) translateY(-10px);
-	}
+	0%, 100% { transform: translateX(0) translateY(0); }
+	50% { transform: translateX(20px) translateY(-10px); }
 }
 
 @keyframes float-slower {
-	0%, 100% {
-		transform: translateX(0) translateY(0);
-	}
-	50% {
-		transform: translateX(-15px) translateY(-8px);
-	}
+	0%, 100% { transform: translateX(0) translateY(0); }
+	50% { transform: translateX(-15px) translateY(-8px); }
 }
 
-.animate-orbit {
-	animation: orbit linear infinite;
-}
-
-.animate-twinkle {
-	animation: twinkle 2s ease-in-out infinite;
-}
-
-.animate-warp {
-	animation: warp 1s linear forwards;
-}
-
-.animate-pulse-slow {
-	animation: pulse-slow 2s ease-in-out infinite;
-}
-
-.animate-fade-in {
-	animation: fade-in 0.5s ease-out forwards;
-}
-
-.animate-float-slow {
-	animation: float-slow 8s ease-in-out infinite;
-}
-
-.animate-float-slower {
-	animation: float-slower 12s ease-in-out infinite;
-}
+.animate-orbit { animation: orbit linear infinite; }
+.animate-twinkle { animation: twinkle 2s ease-in-out infinite; }
+.animate-warp { animation: warp 1s linear forwards; }
+.animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
+.animate-fade-in { animation: fade-in 0.5s ease-out forwards; }
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-slower { animation: float-slower 12s ease-in-out infinite; }
 
 /* Corvette Animations */
 @keyframes corvette-drive {
-	0% {
-		left: -150px;
-	}
-	100% {
-		left: calc(100% + 50px);
-	}
+	0% { left: -150px; }
+	100% { left: calc(100% + 50px); }
 }
 
 @keyframes spin-wheels {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
 
 @keyframes road-marks {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-100%); }
 }
 
 @keyframes speed-lines {
-	0% {
-		opacity: 0.6;
-		transform: translateX(0) scaleX(1);
-	}
-	100% {
-		opacity: 0;
-		transform: translateX(-30px) scaleX(0.5);
-	}
+	0% { opacity: 0.6; transform: translateX(0) scaleX(1); }
+	100% { opacity: 0; transform: translateX(-30px) scaleX(0.5); }
 }
 
-.animate-corvette-drive {
-	animation: corvette-drive linear infinite;
-}
-
-.animate-spin-wheels {
-	animation: spin-wheels linear infinite;
-}
-
-.animate-road-marks {
-	animation: road-marks 2s linear infinite;
-}
-
+.animate-corvette-drive { animation: corvette-drive linear infinite; }
+.animate-spin-wheels { animation: spin-wheels linear infinite; }
+.animate-road-marks { animation: road-marks 2s linear infinite; }
 .animate-road-marks-delayed {
 	animation: road-marks 2s linear infinite;
 	animation-delay: 1s;
 }
-
-.animate-speed-lines {
-	animation: speed-lines 0.3s ease-out infinite;
-}
+.animate-speed-lines { animation: speed-lines 0.3s ease-out infinite; }
 
 /* Chicken Crossing Animations */
 @keyframes chicken-cross {
-	0% {
-		left: 10%;
-	}
-	100% {
-		left: 90%;
-	}
+	0% { left: 10%; }
+	100% { left: 90%; }
 }
 
 @keyframes chicken-walk-left {
-	0%, 100% {
-		transform: translateY(0) rotate(0deg);
-	}
-	25% {
-		transform: translateY(-3px) rotate(-5deg);
-	}
-	50% {
-		transform: translateY(0) rotate(0deg);
-	}
-	75% {
-		transform: translateY(-3px) rotate(5deg);
-	}
+	0%, 100% { transform: translateY(0) rotate(0deg); }
+	25% { transform: translateY(-3px) rotate(-5deg); }
+	50% { transform: translateY(0) rotate(0deg); }
+	75% { transform: translateY(-3px) rotate(5deg); }
 }
 
 @keyframes chicken-walk-right {
-	0%, 100% {
-		transform: translateY(0) rotate(0deg);
-	}
-	25% {
-		transform: translateY(-3px) rotate(5deg);
-	}
-	50% {
-		transform: translateY(0) rotate(0deg);
-	}
-	75% {
-		transform: translateY(-3px) rotate(-5deg);
-	}
+	0%, 100% { transform: translateY(0) rotate(0deg); }
+	25% { transform: translateY(-3px) rotate(5deg); }
+	50% { transform: translateY(0) rotate(0deg); }
+	75% { transform: translateY(-3px) rotate(-5deg); }
 }
 
-.animate-chicken-cross {
-	animation: chicken-cross 6s ease-in-out forwards;
-}
-
-.animate-chicken-walk-left {
-	animation: chicken-walk-left 0.3s ease-in-out infinite;
-}
-
+.animate-chicken-cross { animation: chicken-cross 6s ease-in-out forwards; }
+.animate-chicken-walk-left { animation: chicken-walk-left 0.3s ease-in-out infinite; }
 .animate-chicken-walk-right {
 	animation: chicken-walk-right 0.3s ease-in-out infinite;
 	animation-delay: 0.15s;
@@ -266,16 +200,32 @@ body {
 
 /* Flappy Nails Animations */
 @keyframes fade-out {
-	0% {
-		opacity: 1;
-		height: 4px;
-	}
-	100% {
-		opacity: 0;
-		height: 12px;
-	}
+	0% { opacity: 1; height: 4px; }
+	100% { opacity: 0; height: 12px; }
 }
 
-.animate-fade-out {
-	animation: fade-out 0.3s ease-out forwards;
+.animate-fade-out { animation: fade-out 0.3s ease-out forwards; }
+
+/* Performance: reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+	.dancing-cat,
+	.animate-orbit,
+	.animate-twinkle,
+	.animate-warp,
+	.animate-pulse-slow,
+	.animate-float-slow,
+	.animate-float-slower,
+	.animate-corvette-drive,
+	.animate-spin-wheels,
+	.animate-road-marks,
+	.animate-road-marks-delayed,
+	.animate-speed-lines,
+	.animate-chicken-cross,
+	.animate-chicken-walk-left,
+	.animate-chicken-walk-right,
+	.animate-fade-out,
+	.animate-fade-in {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+	}
 }

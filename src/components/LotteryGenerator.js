@@ -9,7 +9,6 @@ export default function LotteryGenerator() {
 		setIsGenerating(true);
 		setNumbers([]);
 
-		// Animate the generation
 		const interval = setInterval(() => {
 			setNumbers((prev) => {
 				if (prev.length >= 6) {
@@ -27,7 +26,6 @@ export default function LotteryGenerator() {
 		setIsGenerating(true);
 		setNumbers([]);
 
-		// Generate 6-digit Thai lottery number
 		setTimeout(() => {
 			const thaiNumber = Math.floor(Math.random() * 900000) + 100000;
 			setNumbers(thaiNumber.toString().split('').map(Number));
@@ -36,28 +34,32 @@ export default function LotteryGenerator() {
 	};
 
 	return (
-		<div className="w-full max-w-md mx-auto p-6 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl shadow-lg border-2 border-amber-300">
-			<h2 className="text-2xl font-bold text-amber-900 mb-4 text-center">
-				🎰 สุ่มเลขหวย
+		<div className="w-full max-w-md mx-auto p-6 bg-[var(--bg-surface)] rounded-2xl shadow-[var(--shadow-md)] border border-[var(--border-color)]">
+			<h2 className="text-lg font-semibold text-[var(--text-primary)] mb-1 text-center">
+				สุ่มเลขหวย
 			</h2>
+			<p className="text-xs text-[var(--text-secondary)] text-center mb-5">โชคดีมีชัย! 🍀</p>
 
-			<div className="flex flex-wrap justify-center gap-3 mb-6 min-h-[80px] items-center">
+			<div className="flex flex-wrap justify-center gap-2 mb-5 min-h-[72px] items-center">
 				{numbers.map((num, index) => (
 					<div
 						key={index}
-						className="w-14 h-14 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl font-bold text-amber-900 border-2 border-amber-400 animate-bounce"
+						className="w-12 h-12 bg-[var(--bg-surface-2)] border border-[var(--border-color)] rounded-xl flex items-center justify-center text-xl font-bold text-[var(--text-primary)] animate-bounce"
 						style={{ animationDelay: `${index * 0.1}s`, animationDuration: '0.5s' }}
 					>
 						{num}
 					</div>
 				))}
+				{numbers.length === 0 && !isGenerating && (
+					<p className="text-sm text-[var(--text-muted)]">กด generate เพื่อสุ่มเลข</p>
+				)}
 			</div>
 
-			<div className="flex flex-col gap-3">
+			<div className="flex flex-col gap-2">
 				<button
 					onClick={generateThaiLottery}
 					disabled={isGenerating}
-					className="w-full py-3 px-6 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold rounded-xl shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:transform-none"
+					className="w-full py-2.5 px-6 bg-[var(--accent)] hover:opacity-90 disabled:opacity-40 text-white font-semibold text-sm rounded-xl shadow-[var(--shadow-sm)] transition-all duration-200 transform hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:transform-none"
 				>
 					{isGenerating ? 'กำลังสุ่ม...' : 'สุ่มหวยไทย 6 หลัก'}
 				</button>
@@ -65,15 +67,11 @@ export default function LotteryGenerator() {
 				<button
 					onClick={generateLottery}
 					disabled={isGenerating}
-					className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold rounded-xl shadow-md transition-all duration-200 transform hover:scale-105 active:scale-95 disabled:cursor-not-allowed disabled:transform-none"
+					className="w-full py-2.5 px-6 bg-[var(--bg-surface-2)] hover:bg-[var(--border-color)] disabled:opacity-40 text-[var(--text-primary)] font-semibold text-sm rounded-xl border border-[var(--border-color)] shadow-[var(--shadow-sm)] transition-all duration-200 transform hover:scale-[1.02] active:scale-95 disabled:cursor-not-allowed disabled:transform-none"
 				>
 					{isGenerating ? 'กำลังสุ่ม...' : 'สุ่มแบบ Lotto (1-49)'}
 				</button>
 			</div>
-
-			<p className="text-sm text-amber-700 text-center mt-4">
-				โชคดีมีชัย! 🍀
-			</p>
 		</div>
 	);
 }
