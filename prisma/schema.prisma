@@ -38,3 +38,10 @@ model VisitorOfTheDay {
   selectedAt   DateTime @default(now())
   expiresAt    DateTime
 }
+
+model MinedTokens {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  total     Int      @default(0)
+  updatedAt DateTime @updatedAt
+}

@@ -8,6 +8,7 @@ import CorvetteDrive from '@/components/CorvetteDrive';
 import ChickenCrossing from '@/components/ChickenCrossing';
 import FlappyNails from '@/components/FlappyNails';
 import Caminar from '@/components/Caminar';
+import AIMiner from '@/components/AIMiner';
 import ShareButton from '@/components/ShareButton';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
 				<main className="w-full max-w-3xl flex flex-col items-center py-8 px-4">
 					<div className="flex flex-col items-center gap-8 w-full">
 						<GlobalCounter />
+						<AIMiner />
 						<VisitorOfTheDay />
 						<LotteryGenerator />
 						<Caminar />
