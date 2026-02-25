@@ -9,6 +9,7 @@ import ChickenCrossing from '@/components/ChickenCrossing';
 import FlappyNails from '@/components/FlappyNails';
 import Caminar from '@/components/Caminar';
 import AIMiner from '@/components/AIMiner';
+import GoalCounter from '@/components/GoalCounter';
 import ShareButton from '@/components/ShareButton';
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
 					<div className="flex flex-col items-center gap-8 w-full">
 						<GlobalCounter />
 						<AIMiner />
+						<GoalCounter />
 						<VisitorOfTheDay />
 						<LotteryGenerator />
 						<Caminar />
