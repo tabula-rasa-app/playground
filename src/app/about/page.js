@@ -1,5 +1,6 @@
 import CheetosRain from '@/components/CheetosRain';
 import WorldcoinTicker from '@/components/WorldcoinTicker';
+import IntelligentError from '@/components/IntelligentError';
 
 export default function About() {
 	return (
@@ -44,6 +45,11 @@ export default function About() {
 							<p className="text-blue-800 leading-relaxed">
 								Poland is a captivating destination that offers an extraordinary blend of rich history, stunning architecture, and vibrant culture. From the medieval streets of Kraków with its magnificent Wawel Castle to the reconstructed beauty of Warsaw's Old Town, Poland's cities tell stories of resilience and renewal. The country boasts breathtaking natural landscapes, including the Tatra Mountains, pristine Baltic beaches, and ancient Białowieża Forest. Polish cuisine is hearty and delicious, featuring pierogi, żurek, and world-class vodka. The warmth and hospitality of Polish people make visitors feel welcome, while the affordable prices allow travelers to experience luxury without breaking the bank. Whether you're exploring the poignant history of Auschwitz, marveling at the salt sculptures in Wieliczka Salt Mine, or enjoying the lively atmosphere of seaside Gdańsk, Poland offers unforgettable experiences that combine deep cultural heritage with modern European charm.
 							</p>
+						</div>
+						{/* Intelligent Error */}
+						<div className="max-w-xl w-full">
+							<h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">El Error Inteligente 🧠</h2>
+							<IntelligentError />
 						</div>
 					</div>
 				</main>
