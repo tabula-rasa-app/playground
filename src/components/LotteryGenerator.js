@@ -9,16 +9,22 @@ export default function LotteryGenerator() {
 		setIsGenerating(true);
 		setNumbers([]);
 
+		// Fisher-Yates shuffle on pool 1–49, then pick first 6 (no duplicates)
+		const pool = Array.from({ length: 49 }, (_, i) => i + 1);
+		for (let i = pool.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[pool[i], pool[j]] = [pool[j], pool[i]];
+		}
+		const picked = pool.slice(0, 6);
+
+		let revealed = 0;
 		const interval = setInterval(() => {
-			setNumbers((prev) => {
-				if (prev.length >= 6) {
-					clearInterval(interval);
-					setIsGenerating(false);
-					return prev;
-				}
-				const newNumber = Math.floor(Math.random() * 49) + 1;
-				return [...prev, newNumber];
-			});
+			revealed++;
+			setNumbers(picked.slice(0, revealed));
+			if (revealed >= 6) {
+				clearInterval(interval);
+				setIsGenerating(false);
+			}
 		}, 200);
 	};
 
@@ -44,7 +50,7 @@ export default function LotteryGenerator() {
 				{numbers.map((num, index) => (
 					<div
 						key={index}
-						className="w-12 h-12 bg-[var(--bg-surface-2)] border border-[var(--border-color)] rounded-xl flex items-center justify-center text-xl font-bold text-[var(--text-primary)] animate-bounce"
+						className="w-12 h-12 bg-[var(--accent)] rounded-full flex items-center justify-center text-base font-bold text-white shadow-md animate-bounce"
 						style={{ animationDelay: `${index * 0.1}s`, animationDuration: '0.5s' }}
 					>
 						{num}
