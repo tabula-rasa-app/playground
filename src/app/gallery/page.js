@@ -1,5 +1,6 @@
 import CheetosRain from '@/components/CheetosRain';
 import WorldcoinTicker from '@/components/WorldcoinTicker';
+import CleanDog from '@/components/CleanDog';
 
 export default function Gallery() {
 	return (
@@ -82,6 +83,9 @@ export default function Gallery() {
 								</svg>
 							</div>
 						</div>
+
+						{/* Clean Dog */}
+						<CleanDog />
 
 						{/* Dog Image */}
 						<div className="p-6 bg-blue-50/70 rounded-lg border-2 border-blue-300 max-w-xl w-full">
