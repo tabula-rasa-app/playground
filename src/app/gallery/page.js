@@ -1,6 +1,7 @@
 import CheetosRain from '@/components/CheetosRain';
 import WorldcoinTicker from '@/components/WorldcoinTicker';
 import CleanDog from '@/components/CleanDog';
+import ColourfulLifestyle from '@/components/ColourfulLifestyle';
 
 export default function Gallery() {
 	return (
@@ -83,6 +84,9 @@ export default function Gallery() {
 								</svg>
 							</div>
 						</div>
+
+						{/* Colourful Lifestyle */}
+						<ColourfulLifestyle />
 
 						{/* Clean Dog */}
 						<CleanDog />
