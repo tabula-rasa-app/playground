@@ -5,6 +5,7 @@ import ColourfulLifestyle from '@/components/ColourfulLifestyle';
 import ADog from '@/components/ADog';
 import FetchDog from '@/components/FetchDog';
 import VinTasting from '@/components/VinTasting';
+import ShibaInu from '@/components/ShibaInu';
 
 export default function Gallery() {
 	return (
@@ -96,6 +97,9 @@ export default function Gallery() {
 
 						{/* Fetch Dog */}
 						<FetchDog />
+
+						{/* Shiba Inu */}
+						<ShibaInu />
 
 						{/* Vin Tasting */}
 						<VinTasting />
