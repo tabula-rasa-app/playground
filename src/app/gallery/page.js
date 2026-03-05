@@ -4,6 +4,7 @@ import CleanDog from '@/components/CleanDog';
 import ColourfulLifestyle from '@/components/ColourfulLifestyle';
 import ADog from '@/components/ADog';
 import FetchDog from '@/components/FetchDog';
+import VinTasting from '@/components/VinTasting';
 
 export default function Gallery() {
 	return (
@@ -95,6 +96,9 @@ export default function Gallery() {
 
 						{/* Fetch Dog */}
 						<FetchDog />
+
+						{/* Vin Tasting */}
+						<VinTasting />
 
 						{/* Clean Dog */}
 						<CleanDog />
