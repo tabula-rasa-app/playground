@@ -3,6 +3,7 @@ import WorldcoinTicker from '@/components/WorldcoinTicker';
 import CleanDog from '@/components/CleanDog';
 import ColourfulLifestyle from '@/components/ColourfulLifestyle';
 import ADog from '@/components/ADog';
+import FetchDog from '@/components/FetchDog';
 
 export default function Gallery() {
 	return (
@@ -91,6 +92,9 @@ export default function Gallery() {
 
 						{/* A Dog */}
 						<ADog />
+
+						{/* Fetch Dog */}
+						<FetchDog />
 
 						{/* Clean Dog */}
 						<CleanDog />
