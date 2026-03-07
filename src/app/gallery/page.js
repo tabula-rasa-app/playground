@@ -6,6 +6,7 @@ import ADog from '@/components/ADog';
 import FetchDog from '@/components/FetchDog';
 import VinTasting from '@/components/VinTasting';
 import ShibaInu from '@/components/ShibaInu';
+import UniaoDeRede from '@/components/UniaoDeRede';
 
 export default function Gallery() {
 	return (
@@ -100,6 +101,9 @@ export default function Gallery() {
 
 						{/* Shiba Inu */}
 						<ShibaInu />
+
+						{/* Uniao de Rede */}
+						<UniaoDeRede />
 
 						{/* Vin Tasting */}
 						<VinTasting />
