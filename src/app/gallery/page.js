@@ -8,6 +8,7 @@ import VinTasting from '@/components/VinTasting';
 import ShibaInu from '@/components/ShibaInu';
 import UniaoDeRede from '@/components/UniaoDeRede';
 import Somonino from '@/components/Somonino';
+import InvestmentIndonesia from '@/components/InvestmentIndonesia';
 
 export default function Gallery() {
 	return (
@@ -102,6 +103,9 @@ export default function Gallery() {
 
 						{/* Shiba Inu */}
 						<ShibaInu />
+
+						{/* Investment Indonesia */}
+						<InvestmentIndonesia />
 
 						{/* Somonino */}
 						<Somonino />
