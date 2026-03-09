@@ -9,6 +9,7 @@ import ShibaInu from '@/components/ShibaInu';
 import UniaoDeRede from '@/components/UniaoDeRede';
 import Somonino from '@/components/Somonino';
 import InvestmentIndonesia from '@/components/InvestmentIndonesia';
+import Fire from '@/components/Fire';
 
 export default function Gallery() {
 	return (
@@ -103,6 +104,9 @@ export default function Gallery() {
 
 						{/* Shiba Inu */}
 						<ShibaInu />
+
+						{/* Fire */}
+						<Fire />
 
 						{/* Investment Indonesia */}
 						<InvestmentIndonesia />
