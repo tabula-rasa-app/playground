@@ -10,6 +10,7 @@ import UniaoDeRede from '@/components/UniaoDeRede';
 import Somonino from '@/components/Somonino';
 import InvestmentIndonesia from '@/components/InvestmentIndonesia';
 import Fire from '@/components/Fire';
+import Bagus from '@/components/Bagus';
 
 export default function Gallery() {
 	return (
@@ -107,6 +108,9 @@ export default function Gallery() {
 
 						{/* Fire */}
 						<Fire />
+
+						{/* Bagus */}
+						<Bagus />
 
 						{/* Investment Indonesia */}
 						<InvestmentIndonesia />
