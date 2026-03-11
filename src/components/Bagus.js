@@ -3,18 +3,18 @@
 import { useState, useEffect, useRef } from 'react';
 
 const BAGUS_MESSAGES = [
-	{ text: 'Kamu luar biasa!', sub: 'You are extraordinary!' },
-	{ text: 'Tetap semangat!', sub: 'Keep up the spirit!' },
-	{ text: 'Kamu bisa!', sub: 'You can do it!' },
-	{ text: 'Hebat sekali!', sub: 'So amazing!' },
-	{ text: 'Terus maju!', sub: 'Keep moving forward!' },
-	{ text: 'Kamu keren!', sub: 'You are awesome!' },
-	{ text: 'Jangan menyerah!', sub: "Don't give up!" },
-	{ text: 'Luar biasa!', sub: 'Extraordinary!' },
-	{ text: 'Mantap jiwa!', sub: 'Absolutely great!' },
-	{ text: 'Top banget!', sub: 'Top notch!' },
-	{ text: 'Kerja bagus!', sub: 'Good job!' },
-	{ text: 'Kamu membanggakan!', sub: 'You make us proud!' },
+	{ text: 'Kamu luar biasa!', sub: '¡Eres extraordinario/a!' },
+	{ text: 'Tetap semangat!', sub: '¡Mantén el ánimo!' },
+	{ text: 'Kamu bisa!', sub: '¡Tú puedes!' },
+	{ text: 'Hebat sekali!', sub: '¡Increíble!' },
+	{ text: 'Terus maju!', sub: '¡Sigue adelante!' },
+	{ text: 'Kamu keren!', sub: '¡Eres genial!' },
+	{ text: 'Jangan menyerah!', sub: '¡No te rindas!' },
+	{ text: 'Luar biasa!', sub: '¡Extraordinario!' },
+	{ text: 'Mantap jiwa!', sub: '¡Absolutamente genial!' },
+	{ text: 'Top banget!', sub: '¡De primera!' },
+	{ text: 'Kerja bagus!', sub: '¡Buen trabajo!' },
+	{ text: 'Kamu membanggakan!', sub: '¡Nos llenas de orgullo!' },
 ];
 
 const STAR_COLORS = ['#FFD700', '#FF6B6B', '#4ECDC4', '#A855F7', '#F97316', '#22C55E'];
@@ -146,7 +146,7 @@ export default function Bagus() {
 					BAGUS!
 				</h2>
 				<p style={{ color: '#9ca3af', fontSize: '0.75rem', margin: 0, fontWeight: '600', letterSpacing: '0.12em' }}>
-					INDONESIAN POSITIVITY BOOSTER
+					IMPULSO DE POSITIVIDAD INDONESIO
 				</p>
 			</div>
 
