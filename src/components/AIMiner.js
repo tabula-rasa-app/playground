@@ -55,6 +55,8 @@ export default function AIMiner() {
   const [loading, setLoading] = useState(true);
   const [particles, setParticles] = useState([]);
   const [animPhase, setAnimPhase] = useState(0);
+  const [claimedAt, setClaimedAt] = useState(null);
+  const [claiming, setClaiming] = useState(false);
 
   const mineIntervalRef = useRef(null);
   const saveIntervalRef = useRef(null);
@@ -84,11 +86,31 @@ export default function AIMiner() {
       if (res.ok) {
         const data = await res.json();
         setTotalTokens(data.total);
+        setClaimedAt(data.claimedAt || null);
       }
     } catch (e) {
       console.error('Failed to fetch tokens', e);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleClaim = async () => {
+    setClaiming(true);
+    try {
+      const res = await fetch('/api/mined-tokens', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'claim' }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setClaimedAt(data.claimedAt);
+      }
+    } catch (e) {
+      console.error('Failed to claim tokens', e);
+    } finally {
+      setClaiming(false);
     }
   };
 
@@ -231,6 +253,23 @@ export default function AIMiner() {
         >
           {isMining ? 'Stop Mining' : 'Start Mining'}
         </button>
+
+        {/* Claim button */}
+        <button
+          onClick={handleClaim}
+          disabled={loading || claiming}
+          className="w-full py-3 rounded-xl font-bold text-white text-base transition-all duration-200 active:scale-95 shadow-lg bg-yellow-500 hover:bg-yellow-400 disabled:opacity-40 disabled:cursor-not-allowed"
+          style={{ boxShadow: '0 0 20px rgba(234,179,8,0.4)' }}
+        >
+          {claiming ? 'Claiming...' : '🪙 Claim Coins'}
+        </button>
+
+        {/* Claimed date */}
+        {claimedAt && (
+          <p className="text-yellow-300 text-xs text-center">
+            Last claimed: {new Date(claimedAt).toLocaleString()}
+          </p>
+        )}
 
         <p className="text-purple-400 text-xs text-center">
           Tokens are shared globally and persist across sessions!

@@ -15,7 +15,7 @@ export async function GET() {
       });
     }
 
-    return NextResponse.json({ total: record.total, updatedAt: record.updatedAt });
+    return NextResponse.json({ total: record.total, claimedAt: record.claimedAt, updatedAt: record.updatedAt });
   } catch (error) {
     console.error('Error fetching mined tokens:', error);
     return NextResponse.json({ error: 'Failed to fetch mined tokens' }, { status: 500 });
@@ -24,7 +24,18 @@ export async function GET() {
 
 export async function POST(request) {
   try {
-    const { amount } = await request.json();
+    const body = await request.json();
+
+    if (body.action === 'claim') {
+      const record = await prisma.minedTokens.upsert({
+        where: { name: MINER_KEY },
+        update: { claimedAt: new Date() },
+        create: { name: MINER_KEY, total: 0, claimedAt: new Date() },
+      });
+      return NextResponse.json({ total: record.total, claimedAt: record.claimedAt });
+    }
+
+    const { amount } = body;
 
     if (!amount || typeof amount !== 'number' || amount <= 0) {
       return NextResponse.json({ error: 'Invalid amount' }, { status: 400 });

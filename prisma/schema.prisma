@@ -40,10 +40,11 @@ model VisitorOfTheDay {
 }
 
 model MinedTokens {
-  id        Int      @id @default(autoincrement())
-  name      String   @unique
-  total     Int      @default(0)
-  updatedAt DateTime @updatedAt
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  total     Int       @default(0)
+  claimedAt DateTime?
+  updatedAt DateTime  @updatedAt
 }
 
 model GoalCounter {
