@@ -46,6 +46,12 @@ export default function Home() {
 			<span className="doge-word" style={{ bottom: '22%', right: '6%', fontSize: '1.5rem', color: '#7b2d00', '--rot': '8deg', animationDelay: '1s' }}>such shiba</span>
 			<span className="doge-word" style={{ bottom: '12%', left: '8%', fontSize: '1.1rem', color: '#fff', '--rot': '-3deg', animationDelay: '1.4s' }}>many wow</span>
 			<span className="doge-word" style={{ bottom: '8%', right: '7%', fontSize: '1.3rem', color: '#7b2d00', '--rot': '5deg', animationDelay: '0.2s' }}>very good boi</span>
+			<span className="doge-word" style={{ top: '5%', left: '40%', fontSize: '1.4rem', color: '#fff', '--rot': '3deg', animationDelay: '0.3s' }}>Dog</span>
+			<span className="doge-word" style={{ top: '18%', left: '20%', fontSize: '1.2rem', color: '#7b2d00', '--rot': '-7deg', animationDelay: '0.7s' }}>Pig</span>
+			<span className="doge-word" style={{ top: '20%', right: '22%', fontSize: '1.5rem', color: '#fff', '--rot': '9deg', animationDelay: '1.1s' }}>Money</span>
+			<span className="doge-word" style={{ bottom: '38%', left: '18%', fontSize: '1.3rem', color: '#7b2d00', '--rot': '-5deg', animationDelay: '0.5s' }}>Dreams</span>
+			<span className="doge-word" style={{ bottom: '32%', right: '18%', fontSize: '1.2rem', color: '#fff', '--rot': '7deg', animationDelay: '0.9s' }}>Singing</span>
+			<span className="doge-word" style={{ bottom: '18%', left: '35%', fontSize: '1.4rem', color: '#7b2d00', '--rot': '-4deg', animationDelay: '1.3s' }}>Sleeping</span>
 
 			{/* The star of the show */}
 			<div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
