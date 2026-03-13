@@ -12,6 +12,7 @@ import Somonino from '@/components/Somonino';
 import InvestmentIndonesia from '@/components/InvestmentIndonesia';
 import Fire from '@/components/Fire';
 import Bagus from '@/components/Bagus';
+import Bokek from '@/components/Bokek';
 
 export default function Gallery() {
 	return (
@@ -115,6 +116,9 @@ export default function Gallery() {
 
 						{/* Bagus */}
 						<Bagus />
+
+						{/* Bokek */}
+						<Bokek />
 
 						{/* Investment Indonesia */}
 						<InvestmentIndonesia />
