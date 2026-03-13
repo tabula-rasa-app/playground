@@ -3,6 +3,7 @@ import WorldcoinTicker from '@/components/WorldcoinTicker';
 import CleanDog from '@/components/CleanDog';
 import ColourfulLifestyle from '@/components/ColourfulLifestyle';
 import ADog from '@/components/ADog';
+import DogBark from '@/components/DogBark';
 import FetchDog from '@/components/FetchDog';
 import VinTasting from '@/components/VinTasting';
 import ShibaInu from '@/components/ShibaInu';
@@ -96,6 +97,9 @@ export default function Gallery() {
 
 						{/* Colourful Lifestyle */}
 						<ColourfulLifestyle />
+
+						{/* Dog Bark */}
+						<DogBark />
 
 						{/* A Dog */}
 						<ADog />
