@@ -13,6 +13,7 @@ import InvestmentIndonesia from '@/components/InvestmentIndonesia';
 import Fire from '@/components/Fire';
 import Bagus from '@/components/Bagus';
 import Bokek from '@/components/Bokek';
+import Diego from '@/components/Diego';
 
 export default function Gallery() {
 	return (
@@ -116,6 +117,9 @@ export default function Gallery() {
 
 						{/* Bagus */}
 						<Bagus />
+
+						{/* Diego */}
+						<Diego />
 
 						{/* Bokek */}
 						<Bokek />
